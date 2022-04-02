@@ -13,7 +13,7 @@ function setup() {
 function draw() {
   background(220);
   pantallas();
-  //console.log(mouseX, ",",mouseY);
+  //console.log(mouseX, ',',mouseY);
 }
 
 function preload(){
@@ -49,10 +49,12 @@ function pantallas() {
     }
 }
 
-function mousePressed() {
-  pag1.reproducir(264,131,333,199,RRH);
-  pag1.reproducir(266,216,333,287,HBB)
-  /*pag1.reproducir(264,302,333,373,BBS)
-  pag1.reproducir(264,387,333,458,DB)
-  pag1.reproducir(264,480,333,550,LSM)*/
+function mouseClicked() {
+  if(pantalla == 1) {
+    pag1.reproducir(298,166,RRH);
+    pag1.reproducir(298,255,HBB);
+    pag1.reproducir(298,339,BBS);
+    pag1.reproducir(298,429,DB);
+    pag1.reproducir(298,513,LSM);
+    }
 }

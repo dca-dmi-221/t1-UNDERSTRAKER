@@ -1,6 +1,7 @@
 class pagina1 {
     constructor(){
-
+        this.x = mouseX;
+        this.y = mouseY;
     }
 
 mostrar(){
@@ -20,13 +21,21 @@ texto(){
     text("CANCIONES",230,100);
 }
 
-reproducir(posX1,posY1,posX2,posY2,cancion){
-    if(dist(posX1,posY1,posX2,posY2) < 10);
+reproducir(posX1,posY1,cancion){
+    if(dist(mouseX, mouseY, posX1,posY1) < 40) {
         if (cancion.isPlaying()) {
             cancion.stop();
+            cancion.play();
         } else {
             cancion.play();
         }
+
+        return cancion;
+    }  
+}
+    
+botonesRep(posX1,posY1){
+
 }
 
 }
