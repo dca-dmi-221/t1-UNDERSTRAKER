@@ -10,7 +10,7 @@
 mostrar(){
     image(fondo1,0,0);
     image(tommy,0,0);
-    image(rect,0,0);
+    image(rectangle,0,0);
     image(repro,0,0);
     image(canc,0,-20);
     

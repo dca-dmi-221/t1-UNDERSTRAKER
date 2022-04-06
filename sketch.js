@@ -24,6 +24,7 @@ function draw() {
   background(220);
   pantallas();
   //console.log(mouseX, ',',mouseY);
+  
 }
 
 function preload(){
@@ -31,7 +32,7 @@ function preload(){
   fondo0 = loadImage('recursos/Pantalla0.png')
   fondo1 = loadImage('recursos/pantalla1.png')
   tommy = loadImage('recursos/tommy.png')
-  rect = loadImage('recursos/rect.png')
+  rectangle = loadImage('recursos/rect.png')
   repro = loadImage('recursos/reproduciendo.png')
   canc = loadImage('recursos/canciones.png')
   vol = loadImage('recursos/volumen.png')
@@ -66,6 +67,7 @@ function pantallas() {
         pag1.mostrar();
         volumen.mostrar();
         rep.mostrar();
+        
         break;
     }
 }
@@ -89,10 +91,13 @@ function mouseClicked() {
     
     }
 
-    
-
 }
 
+function mialerta() {
+  confirm("Se recomienda pausar la cancion antes de seleccionar otra")
+}
+
+mialerta();
 function mousePressed() {
   volumen.movimiento();
 }

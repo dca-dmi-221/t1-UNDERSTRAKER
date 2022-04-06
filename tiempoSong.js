@@ -7,8 +7,6 @@ class tiempoSong{
     mostrar(){
         fill(211);
         noStroke();
-        //no entiendo porque dice que no es una funcion
-        rect(0,0,1280,180);
-        //rect(this.posX,this.posY,1280,18);
+        rect(this.posX,this.posY,1280,4);
     }
 }
