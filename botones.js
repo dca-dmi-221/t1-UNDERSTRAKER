@@ -26,9 +26,11 @@ class botones {
         canciones[inicio].stop();
         if (inicio < canciones.length -1 ) {
             inicio ++;  
-
+            imagenes ++;
+            console.log(imagenes);
         } else {
             inicio = 0;
+            imagenes = 1;
             
 
         }
@@ -42,8 +44,10 @@ class botones {
             canciones[inicio].stop();
             if (inicio > 0 ) {
                 inicio --;  
+                imagenes --;
             } else {
                 inicio = 4;
+                imagenes = 4;
             }
             canciones[inicio].play();
             console.log(inicio);

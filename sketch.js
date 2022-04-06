@@ -2,6 +2,8 @@ let pantalla;
 let pag0;
 let pag1;
 let boton;
+let vol;
+let rep;
 let fondo0;
 let canciones = [];
 let portada = [];
@@ -14,6 +16,8 @@ function setup() {
   pag0 = new pagina0();
   pag1 = new pagina1();
   boton = new botones();
+  volumen = new volumen();
+  rep = new tiempoSong();
 }
 
 function draw() {
@@ -30,6 +34,7 @@ function preload(){
   rect = loadImage('recursos/rect.png')
   repro = loadImage('recursos/reproduciendo.png')
   canc = loadImage('recursos/canciones.png')
+  vol = loadImage('recursos/volumen.png')
 
   //portadas
   portada[0] = loadImage('recursos/rrh.png')
@@ -59,6 +64,8 @@ function pantallas() {
         break;
       case 1:
         pag1.mostrar();
+        volumen.mostrar();
+        rep.mostrar();
         break;
     }
 }
@@ -79,6 +86,13 @@ function mouseClicked() {
     boton.play();
     boton.next();
     boton.previous();
+    
     }
 
+    
+
+}
+
+function mousePressed() {
+  volumen.movimiento();
 }
