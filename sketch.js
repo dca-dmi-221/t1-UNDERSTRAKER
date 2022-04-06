@@ -11,7 +11,7 @@ let inicio;
 
 function setup() {
   createCanvas(1280, 720);
-  pantalla = 1;
+  pantalla = 0;
   inicio = 0;
   pag0 = new pagina0();
   pag1 = new pagina1();
