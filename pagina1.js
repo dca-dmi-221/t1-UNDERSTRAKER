@@ -1,22 +1,16 @@
-class pagina1 {
+ class pagina1 {
     constructor(){
         this.x = mouseX;
         this.y = mouseY;
-        this.rrhYes = false;
-        this.thbbYes = false;
-        this.bbsYes = false;
-        this.dbYes = false;
-        this.lsmYes = false;
-        this.imagenes = 0;
-
-        //console.log(this.rrhYes)
+        //this.imagenes = 0;
         
     }
+
 
 mostrar(){
     image(fondo1,0,0);
     image(tommy,0,0);
-    image(rect,0,0);
+    image(rectangle,0,0);
     image(repro,0,0);
     image(canc,0,-20);
     
@@ -32,21 +26,31 @@ mostrar(){
     this.texto(Roboto,"Johnny Cash", 350,445,18);
     this.texto(Roboto,"PJ Harvey", 350,535,18);
 
-    switch (this.imagenes) {
+    switch (imagenes) {
         case 1:
             image(portada[0],0,0);
+            this.texto(Roboto,"Red Right Hand",170,650,30);
+            this.texto(Roboto,"Nick Cave & The Bad Seeds", 170,680,20);
             break;
         case 2:
             image(portada[1],0,0);
+            this.texto(Roboto,"The Hardest Button to Button",170,650,30);
+            this.texto(Roboto,"The White Stripes", 170,680,20);
             break;
         case 3:
             image(portada[2],0,0);
+            this.texto(Roboto,"Broken Boy Soldier",170,650,30);
+            this.texto(Roboto,"The Rancoteurs", 170,680,20);
             break;
         case 4:
             image(portada[3],0,0);
+            this.texto(Roboto,"Danny Boy",170,650,30);
+            this.texto(Roboto,"Johnny Cash", 170,680,20);
             break;
         case 5:
             image(portada[4],0,0);
+            this.texto(Roboto,"Long Snake Moak",170,650,30);
+            this.texto(Roboto,"PJ Harvey", 170,680,20);
             break;
     }
 
@@ -73,7 +77,7 @@ reproducir(posX1,posY1,w,h,cancion, noInicio, imagen){
         } else {  
             noInicio
             cancion.play();
-            this.imagenes = imagen;
+            imagenes = imagen;
             //console.log(this.imagenes)
             
             
@@ -82,5 +86,10 @@ reproducir(posX1,posY1,w,h,cancion, noInicio, imagen){
     }  
 }
 
+setImagen(img){
+    this.imagenes = img;
+}
+
     
 }
+
